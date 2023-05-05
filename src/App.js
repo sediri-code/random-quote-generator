@@ -8,8 +8,17 @@ class App extends React.Component {
 
     componentDidMount()
     {
-    console.log('COMPONENT DID MOUNT');
+    axios.get();
     }
+    fetchAdvice =() => {
+        axios.get('https://api.adviceslip.com/advice')
+        .then((response) => {
+            console.log(response);
+          })
+        .catch((error) => {
+        console.log(error);
+         });
+}
     render()
     {
         return ( 

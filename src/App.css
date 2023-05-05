@@ -7,7 +7,7 @@ box-sizing: border-box;
 
 .app {
     height:100%;
-    background: url('./images/naruto.jpg');
+    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url('./images/naruto.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -15,3 +15,48 @@ box-sizing: border-box;
     align-items: center;
     text-align: center;
 }
+
+.card {
+    background-color: whitesmoke;
+    width:40%;
+    height: 20%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+    border-radius:25px;
+    padding:2%;
+    box-shadow: 10px 10px;
+}
+
+.heading {
+    display:flex;
+    align-items:center;
+    height: 580px;
+
+}
+
+@keyframes storm {
+    0% {
+      transform: translate3d(0, 0, 0) translateZ(0);
+    }
+    25% {
+      transform: translate3d(4px, 0, 0) translateZ(0);
+    }
+    50% {
+      transform: translate3d(-3px, 0, 0) translateZ(0);
+    }
+    75% {
+      transform: translate3d(2px, 0, 0) translateZ(0);
+    }
+    100% {
+      transform: translate3d(0, 0, 0) translateZ(0);
+    }
+  }  
+  
+  @media only screen and (max-width: 600px) {
+    .card {
+        width: 80%;
+        height: 30%;
+    }
+  }
